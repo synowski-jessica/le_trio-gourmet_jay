@@ -4,46 +4,56 @@ html{
     background-position: center;
 }
 
-header{
-    height:50px;
+#titreSite{
     border-radius:30px;
-    text-align: center;
     font-family: "Finger Paint", sans-serif;
     font-weight: 400;
-    font-style: normal;
-    font-size: 18px;
+    font-size: 30px;
     border: 2px solid black;
     height: 60px;
     width:700px;
-    margin: auto;
+    background-color: rgba(255, 174, 0, 0.574);
+    margin:auto;
+    text-align: center ;
+    line-height: 60px;
+  
+    
   }
+
+
 
 #area{
     font-style: italic;
     font-size: 40px;
-    margin-top: 100px;
-    padding-top:150px;
-
 }
 
 #buttonRandomMeal{
     height:1em;
     width:12em;
-    background-color: aqua;
-    border: orange solid 2px;
+    background-color:rgba(255, 196, 0, 0.954) ;
+    border: rgba(255, 174, 0, 0.749) solid 2px;
     border-radius:30px;
     margin-top: 50px;
     padding: 10px;
     transition: all 0.2s ease;
-  
-
+    
 }
+#firstPart{
+   padding-top: 150px;
+    margin-bottom: 20px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+   
+    
+    }
+
 
 #buttonRandomMeal:hover{
     height:1em;
     width:12em;
-    background-color: red;
-    border: black solid 2px;
+    background-color: rgba(255, 196, 0, 0.954);
+    border:  rgba(255, 174, 0, 0.749) solid 2px;
     border-radius:30px;
     cursor:pointer;
     transform: translateY(-4px);
@@ -59,10 +69,22 @@ header{
     transform: translateY(4px);
 }
 
+#nameMeal{
+    font-family: "Finger Paint", sans-serif;
+    font-size: 40px
+}
+
+
+
 #imageMeal{
     border-radius:30px;
 }
 
 #videoSource{
     border-radius:30px;
+}
+
+#secondPart{
+    display:flex;
+    justify-content: space-evenly;
 }

@@ -1,6 +1,5 @@
 let buttonRandomMeal = document.getElementById("buttonRandomMeal");
 let area = document.getElementById("area");
-let areaImage = document.getElementById("areaImage");
 let nameMeal = document.getElementById("nameMeal");
 let imageMeal = document.getElementById("imageMeal");
 let ingredientMeal = document.getElementById("ingredientMeal");
@@ -15,7 +14,7 @@ const recetteRandom = async () => {
   let normalLink;
   let videoId = "";
   console.log(response);
-  nameMeal.textContent = response.meals[0].strMeal;
+  nameMeal.textContent = `Menu : ${response.meals[0].strMeal}`;
   area.textContent = response.meals[0].strArea;
   imageMeal.src = response.meals[0].strMealThumb;
   instructionMeal.textContent = response.meals[0].strInstructions;
