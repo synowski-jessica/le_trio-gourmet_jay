@@ -16,75 +16,112 @@ html{
     margin:auto;
     text-align: center ;
     line-height: 60px;
-  
-    
-  }
-
-
-
-#area{
-    font-style: italic;
-    font-size: 40px;
-}
-
-#buttonRandomMeal{
-    height:1em;
-    width:12em;
-    background-color:rgba(255, 196, 0, 0.954) ;
-    border: rgba(255, 174, 0, 0.749) solid 2px;
-    border-radius:30px;
-    margin-top: 50px;
-    padding: 10px;
-    transition: all 0.2s ease;
-    
-}
-#firstPart{
-   padding-top: 150px;
-    margin-bottom: 20px;
-    display:flex;
-    align-items: center;
-    justify-content: space-around;
-   
-    
+    margin-bottom: 130px;
     }
 
 
+#buttonRandomMeal{
+    height:30px;
+    width:200px;
+    background-color:rgba(255, 174, 0, 0.954) ;
+    border: rgba(255, 174, 0, 0.749) solid 2px;
+    border-radius:30px;
+    margin: auto;
+    padding: 10px;
+    transition: all 0.2s ease;
+    line-height: 30px;
+    text-align: center;
+    align-self: flex-end;
+
+    
+    
+    
+}
+#firstPart{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display:flex;
+    justify-content: space-around;
+    }
+
 #buttonRandomMeal:hover{
-    height:1em;
-    width:12em;
+    height:30px;
+    width:200px;
     background-color: rgba(255, 196, 0, 0.954);
     border:  rgba(255, 174, 0, 0.749) solid 2px;
     border-radius:30px;
     cursor:pointer;
     transform: translateY(-4px);
+    line-height: 30px;
+    text-align: center;
 }
 
 #buttonRandomMeal:active{
-    height:1em;
-    width:12em;
+    height:30px;
+    width:200px;
     background-color:yellow;
     border: black solid 2px;
     border-radius:30px;
     cursor:pointer;
     transform: translateY(4px);
+    line-height: 30px;
+    text-align: center;
 }
 
-#nameMeal{
+#nameMeal,#area{
     font-family: "Finger Paint", sans-serif;
-    font-size: 40px
+    font-size: 30px;
+    text-shadow: 3px 3px 3px white;
 }
 
-
-
-#imageMeal{
+#imageMeal,#videoSource{
     border-radius:30px;
-}
-
-#videoSource{
-    border-radius:30px;
+    margin-right:100px;
 }
 
 #secondPart{
-    display:flex;
+    display:flex; 
+    align-items: center;
     justify-content: space-evenly;
+    
+}
+#menu,#instruction,#origin{
+    text-decoration: underline;
+    font-family: "Finger Paint", sans-serif;
+    font-size: 40px;
+    text-shadow: 2px 2px 2px orange;
+}
+
+
+#ingredients{
+    text-decoration: underline;
+    font-family: "Finger Paint", sans-serif;
+    font-size: 40px;
+    
+}
+
+#ingredientMeal,#instructionMeal{
+    font-size:25px;
+    font-weight: lighter;
+    text-align: justify;
+}
+
+#secondPart1{
+    display: flex;
+   margin-left: 100px;
+}
+#secondPart2{
+    margin-right: 150px;
+    background-color:white;
+    border-radius: 30px;
+    border:  rgba(255, 174, 0, 0.749) thick double;
+    width: 600px;
+    padding:10px;
+}
+
+#lastPart{
+    border:  rgba(255, 174, 0, 0.749) thick double;
+    background-color:white;
+    padding: 10px;
+    margin-top: 20px;
 }

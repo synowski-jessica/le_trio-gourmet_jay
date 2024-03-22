@@ -14,7 +14,7 @@ const recetteRandom = async () => {
   let normalLink;
   let videoId = "";
   console.log(response);
-  nameMeal.textContent = `Menu : ${response.meals[0].strMeal}`;
+  nameMeal.textContent = response.meals[0].strMeal;
   area.textContent = response.meals[0].strArea;
   imageMeal.src = response.meals[0].strMealThumb;
   instructionMeal.textContent = response.meals[0].strInstructions;
@@ -34,7 +34,7 @@ const recetteRandom = async () => {
     let ingredient = response.meals[0][`strIngredient${i}`];
     let measure = response.meals[0][`strMeasure${i}`];
     if (ingredient && ingredient.trim() !== "") {
-      ingredientList += `${measure} ${ingredient}<br>`;
+      ingredientList += `๑ ${measure} ${ingredient}<br>`;
     }
   }
   ingredientMeal.innerHTML = ingredientList;
