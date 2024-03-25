@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="script.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
+    <title>Get A Random Meal</title>
+</head>
+<body>
+    <header>
+        <!--logo en haut à gauche + barre de navigation de la page en haut à droite-->
+        <nav id="indexNav">
+            <img src="logo_site_12.png" class="logo">
+            <ul>
+                <li><a href="homePage.html">Homepage</a></li>
+                <li id="buttonRandomMeal"> Get a Random Meal</li>
+                <li><a href="filtreNomMenu.html">Filter by Name</a></li>
+                <li><a href="filtrePaysMenu.html">Filter by Area</a></li>
+                <li><a href="filtreIngredientMenu.html">Filter by Ingredient</a></li>
+            </ul>
+        </nav>  
+    </header>
+   
+    <div id="firstPart">
+        <div >
+            <div id="mpMenu">
+                <div id="menu">Menu : </div>
+                <img id="imageMeal" src="" alt="" width="180" height="120"/>
+            </div>
+            <div >
+                <div id="nameMeal"></div>  
+            </div>
+        </div>
+        <div id="mpOrigin">
+            <div id="origin">Origin :</div>
+            <div id="area"></div>
+        </div>     
+    </div>
+
+    <div id="secondPart">
+        <div>
+            <iframe id="videoSource" width="420" height="315"
+            src="" ></iframe> 
+        </div>
+        <div id="secondPart2">
+            <div id="ingredients"> Ingredients : </div>
+            <div id="ingredientMeal"></div>
+        </div>
+    </div>
+
+    <div id="lastPart">
+        <div id="instruction"> Instructions : </div>
+        <div id="instructionMeal"></div>
+    </div>
+</body>
+</html>

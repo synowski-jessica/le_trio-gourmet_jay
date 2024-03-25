@@ -1,127 +1,200 @@
+/* feuille de style pour la page randomMeal*/
+
+/* gestion de l'arrière plan*/
 html{
-    background-image: url("./logo_site_2.jpg");
+    background-image: url("./logo_site_12.jpg");
     background-size: contain;
-    background-position: center;
+    background-position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
-#titreSite{
-    border-radius:30px;
+/*mise en forme du bouton permettant d'avoir un menu aléatoire */
+#buttonRandomMeal{
+    transition: all 0.2s ease;
     font-family: "Finger Paint", sans-serif;
     font-weight: 400;
-    font-size: 30px;
-    border: 2px solid black;
-    height: 60px;
-    width:700px;
-    background-color: rgba(255, 174, 0, 0.574);
-    margin:auto;
-    text-align: center ;
-    line-height: 60px;
-    margin-bottom: 130px;
-    }
+    color:snow}
 
-
-#buttonRandomMeal{
-    height:30px;
-    width:200px;
-    background-color:rgba(255, 174, 0, 0.954) ;
-    border: rgba(255, 174, 0, 0.749) solid 2px;
-    border-radius:30px;
-    margin: auto;
-    padding: 10px;
-    transition: all 0.2s ease;
-    line-height: 30px;
-    text-align: center;
-    align-self: flex-end;
-
-    
-    
-    
-}
-#firstPart{
-    margin-top: 50px;
-    margin-bottom: 20px;
-    display:flex;
-    justify-content: space-around;
-    }
-
+/* idem que précédemment mais au survol*/   
 #buttonRandomMeal:hover{
-    height:30px;
-    width:200px;
-    background-color: rgba(255, 196, 0, 0.954);
-    border:  rgba(255, 174, 0, 0.749) solid 2px;
+    background-color: rgb(181, 55, 55);
+    border: rgba(133, 18, 18, 0.855) solid 2px;
     border-radius:30px;
     cursor:pointer;
-    transform: translateY(-4px);
-    line-height: 30px;
-    text-align: center;
+    transform: translateY(-2px);  
 }
 
+/*idem que précédemment mais lorsque l'on clique sur le bouton*/
 #buttonRandomMeal:active{
-    height:30px;
-    width:200px;
-    background-color:yellow;
+    background-color:rgb(181, 55, 55);
     border: black solid 2px;
     border-radius:30px;
     cursor:pointer;
-    transform: translateY(4px);
-    line-height: 30px;
-    text-align: center;
+    transform: translateY(2px);
 }
-
-#nameMeal,#area{
-    font-family: "Finger Paint", sans-serif;
-    font-size: 30px;
-    text-shadow: 3px 3px 3px white;
-}
-
-#imageMeal,#videoSource{
-    border-radius:30px;
-    margin-right:100px;
-}
-
-#secondPart{
-    display:flex; 
-    align-items: center;
-    justify-content: space-evenly;
     
+/*mise en page de la 1ère partie correspondant au nom du menu+son image+le pays d'origine de la recette*/   
+#firstPart{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display:flex;
+    justify-content: space-between;
+    }
+
+/*détails à l'intérieur de firstPart*/
+/* comprend les éléments texte"menu"+image de la recette*/
+ #mpMenu{
+    display: flex;
+    align-items: center;
+ }
+
+ /*image de la recette aléatoire*/
+ #imageMeal{
+    border-radius:30px;
+    margin-left:25px;
 }
-#menu,#instruction,#origin{
+
+/*nom de la recette aléatoire*/
+#nameMeal{
+    width:480px;
+    height: 200px;
+    font-family: "Finger Paint", sans-serif;
+    font-size: 25px;
+    text-shadow: 3px 3px 3px white;
+    margin-top: 20px; 
+}
+
+/* comprend le texte origin+le pays d'origine*/
+ #mpOrigin{
+    display:flex;
+    justify-content: flex-start;
+    width:450px;
+    height:60px;
+ }
+
+ /*mis en forme du texte origin*/
+ #origin{
     text-decoration: underline;
     font-family: "Finger Paint", sans-serif;
     font-size: 40px;
-    text-shadow: 2px 2px 2px orange;
+    text-shadow: 2px 2px 2px rgba(196, 41, 41, 0.855);
+    margin-right: 20px; 
 }
 
+/*mis en forme du nom de pays d'où provient la recette*/
+#area{
+    font-family: "Finger Paint", sans-serif;
+    font-size: 40px;
+    text-shadow: 3px 3px 3px white;
+}
 
+/*mis en forme de la video+les ingredients+les instructions*/
+#secondPart{
+    display:flex; 
+    align-items: flex-start;    
+}
+
+/*mis en forme de la vidéo*/
+#videoSource{
+    border-radius:30px;
+    margin-left: 20px;
+    margin-top:-120px;
+}
+
+/*comprend le texte ingrédient+ le détail des ingrédients de la recette aléatoire*/
+#secondPart2{
+    background-color:white;
+    border-radius: 30px;
+    border:  rgba(196, 41, 41, 0.855) thick double;
+    width: 350px;
+    padding:10px;
+    margin-left: 750px;
+    margin-top: -280px;
+}
+
+/*mis en forme du titre Ingrédients*/
 #ingredients{
     text-decoration: underline;
     font-family: "Finger Paint", sans-serif;
     font-size: 40px;
-    
 }
 
+/*mis en forme multiple du titre menu + titre instruction*/
+#menu,#instruction{
+    text-decoration: underline;
+    font-family: "Finger Paint", sans-serif;
+    font-size: 40px;
+    text-shadow: 2px 2px 2px rgba(196, 41, 41, 0.855);
+}
+
+/*mis en forme du détail des ingrédients+des instructions de la recette*/
 #ingredientMeal,#instructionMeal{
     font-size:25px;
     font-weight: lighter;
     text-align: justify;
 }
 
-#secondPart1{
-    display: flex;
-   margin-left: 100px;
-}
-#secondPart2{
-    margin-right: 150px;
-    background-color:white;
-    border-radius: 30px;
-    border:  rgba(255, 174, 0, 0.749) thick double;
-    width: 600px;
-    padding:10px;
-}
-
+/*mis en forme du bloc "texte instructions"+"le détail des instructions"*/
 #lastPart{
-    border:  rgba(255, 174, 0, 0.749) thick double;
+    border:  rgba(196, 41, 41, 0.855) thick double;
     background-color:white;
     padding: 10px;
     margin-top: 20px;
 }
+
+/*taille du logo*/
+.logo{
+    width:120px;
+}
+
+/*mis en forme de la barre de navigation*/
+#indexNav{
+    padding:20px 8%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;  
+}
+
+/*mis en forme de la liste de la barre de navigation*/
+#indexNav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+    border:rgba(196, 41, 41, 0.855) 2px solid;
+    background-color:rgba(196, 41, 41, 0.608) ;
+    border-radius:30px;
+    padding:5px 10px
+}
+
+/*idem que précédemment mais lors du survol*/
+#indexNav ul li:hover{
+    background-color: rgb(181, 55, 55);
+    border: rgba(133, 18, 18, 0.855) solid 2px;
+    border-radius:30px;
+    cursor:pointer;
+    transform: translateY(-2px);
+}
+
+/*idem que précédemment mais lorsque l'on clique dessus*/
+#indexNav ul li:active{
+    background-color:rgb(181, 55, 55);
+    border: black solid 2px;
+    border-radius:30px;
+    cursor:pointer;
+    transform: translateY(2px);
+}
+
+/*mis en forme du texte des liens de la barre de navigation*/
+#indexNav ul li a{
+    text-decoration: none;
+    color:snow;
+    font-size: 16px ;
+    font-family: "Finger Paint", sans-serif;
+    font-weight: 400;
+}
+
+
+
+

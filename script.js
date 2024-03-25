@@ -1,3 +1,4 @@
+//lien avec les div du html
 let buttonRandomMeal = document.getElementById("buttonRandomMeal");
 let area = document.getElementById("area");
 let nameMeal = document.getElementById("nameMeal");
@@ -6,18 +7,31 @@ let ingredientMeal = document.getElementById("ingredientMeal");
 let instructionMeal = document.getElementById("instructionMeal");
 let videoSource = document.getElementById("videoSource");
 
+//fonction qui renvoie une recette aléatoire via l'API
 const recetteRandom = async () => {
+  console.log("toto");
   const apiKey = "1";
   let requestString = `https://www.themealdb.com/api/json/v1/${apiKey}/random.php`;
   let data = await fetch(requestString);
+  console.log("data" + data);
   let response = await data.json();
+  console.log("response" + response);
   let normalLink;
   let videoId = "";
-  console.log(response);
+
+  //permet de récupérer 1 nom de recette aléatoire
   nameMeal.textContent = response.meals[0].strMeal;
+
+  //permet de récupérer le pays de la recette aléatoire
   area.textContent = response.meals[0].strArea;
+
+  //permet de récupérer la photo de la recette aléatoire
   imageMeal.src = response.meals[0].strMealThumb;
+
+  //permet de récupérer les instructions pour pouvoir faire la recette aléatoire
   instructionMeal.textContent = response.meals[0].strInstructions;
+
+  //code qui permet de récupérer la vidéo youtube
   normalLink = response.meals[0].strYoutube;
   if (normalLink.includes("youtube.com/watch?v=")) {
     videoId = normalLink.split("youtube.com/watch?v=")[1];
@@ -29,7 +43,10 @@ const recetteRandom = async () => {
   }
   videoSource.src = `https://www.youtube.com/embed/${videoId}`;
 
+  //boucle qui permet de parcourir les 20 champs d'ingrédients et mesures et n'afficher que les champs où il y a du texte
   let ingredientList = "";
+
+  console.log("avant boucle for");
   for (let i = 1; i <= 20; i++) {
     let ingredient = response.meals[0][`strIngredient${i}`];
     let measure = response.meals[0][`strMeasure${i}`];
@@ -40,15 +57,7 @@ const recetteRandom = async () => {
   ingredientMeal.innerHTML = ingredientList;
   console.log(ingredientList);
 };
+
+//lier le bouton qui permet d'obtenir la recette aléatoire via un click
+recetteRandom();
 buttonRandomMeal.addEventListener("click", recetteRandom);
-
-/*const categorie = async () => {
-  const apiKey = "1";
-  let requestString = `https://www.themealdb.com/api/json/v1/1/list.php?c=list`;
-  let data1 = await fetch(requestString);
-  let response1 = await data1.json();
-  console.log(response1);
-};
-categorie();*/
-
-//test
