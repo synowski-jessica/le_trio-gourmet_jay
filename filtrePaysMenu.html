@@ -3,12 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script defer src="scriptFiltreMenuNom.js"></script>
+    <title>Filtre par pays</title>
+    <script defer src="scriptFiltreMenuPays.js"></script>
+    <link href="stylePaysMenu.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1> filtrer les recettes par nom de pays</h1>
-    
-    <button id="button-home">Home</button>
+    <header>
+    <!--logo en haut à gauche + barre de navigation de la page en haut à droite-->
+        <nav id="indexNav">
+            <img src="logo_site_15.png" class="logo">
+            <ul>
+                <li><a href="homePage.html">Homepage</a></li>
+                <li><a href="randomMeal.html"> Get a Random Meal</a></li>
+                <li><a href="filtreNomMenu.html">Filter by Name</a></li>
+                <li><a href="filtrePaysMenu.html">Filter by Area</a></li>
+                <li><a href="filtreIngredientMenu.html">Filter by Ingredient</a></li>
+            </ul>
+         </nav>  
+   </header>
+    <main>
+        <h1>Click on a country to see its recipes :</h1>
+        <div id="area">
+            <img id="button-american" src="americanArea.png" alt="">
+            <img id="button-british" src="britishArea.png" alt="">
+            <img id="button-canadian" src="canadianArea.png" alt="">
+            <img id="button-chinese" src="chineseArea.png" alt="">
+            <img id="button-croatian" src="croatianArea.png" alt="">
+            <img id="button-dutch" src="dutchArea.png" alt="">
+            <img id="button-egyptian" src="egyptianArea.png" alt="">
+            <img id="button-filipino" src="filipinoArea.png" alt="">
+            <img id="button-french" src="frenchArea.png" alt="">
+            <img id="button-greek" src="greekArea.png" alt="">
+            <img id="button-indian" src="indianArea.png" alt="">
+            <img id="button-irish" src="irishArea.png" alt="">
+            <img id="button-italian" src="italianArea.png" alt="">
+            <img id="button-jamaican" src="jamaicanArea.png" alt="">
+            <img id="button-japanese" src="japaneseArea.png" alt="">
+            <img id="button-kenyan" src="kenyanArea.png" alt="">
+            <img id="button-malaysian" src="malaysianArea.png" alt="">
+            <img id="button-mexican" src="mexicanArea.png" alt="">
+            <img id="button-moroccan" src="moroccanArea.png" alt="">
+            <img id="button-polish" src="polishArea.png" alt="">
+            <img id="button-portuguese" src="portugueseArea.png" alt="">
+            <img id="button-russian" src="russianArea.png" alt="">
+            <img id="button-spanish"  src="spanishArea.png" alt="">
+            <img id="button-thai" src="thaiArea.png" alt="">
+            <img id="button-tunisian" src="tunisianArea.png" alt="">
+            <img id="button-turkish" src="turkishArea.png" alt="">
+            <img id="button-vietnamese" src="vietnameseArea.png" alt="">
+        </div>
+        <div id="affichageRecettePaysSelectionne"></div>
+        
+    </main>
 </body>
 </html>

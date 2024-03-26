@@ -1,19 +1,21 @@
-//lien avec les div du html
-let buttonRandomMeal = document.getElementById("buttonRandomMeal");
+const params = new URLSearchParams(window.location.search);
+const idRecette = params.get("id");
 let area = document.getElementById("area");
 let nameMeal = document.getElementById("nameMeal");
 let imageMeal = document.getElementById("imageMeal");
 let ingredientMeal = document.getElementById("ingredientMeal");
 let instructionMeal = document.getElementById("instructionMeal");
 let videoSource = document.getElementById("videoSource");
+let buttonBack = document.getElementById("imageRetour");
 
-//fonction qui renvoie une recette aléatoire via l'API
-const recetteRandom = async () => {
+// Fonction pour afficher les détails de la recette
+const afficherDetails = async (idRecette) => {
   const apiKey = "1";
-  let requestString = `https://www.themealdb.com/api/json/v1/${apiKey}/random.php`;
+  let requestString = `https://www.themealdb.com/api/json/v1/${apiKey}/lookup.php?i=${idRecette}`;
+  console.log(requestString);
   let data = await fetch(requestString);
   let response = await data.json();
-  console.log(response);
+
   let normalLink;
   let videoId = "";
 
@@ -55,7 +57,8 @@ const recetteRandom = async () => {
   ingredientMeal.innerHTML = ingredientList;
   console.log(ingredientList);
 };
+afficherDetails(idRecette);
 
-//lier le bouton qui permet d'obtenir la recette aléatoire via un click
-recetteRandom();
-buttonRandomMeal.addEventListener("click", recetteRandom);
+buttonBack.addEventListener("click", function () {
+  window.history.back();
+});

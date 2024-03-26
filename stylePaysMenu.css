@@ -1,0 +1,113 @@
+/*feuille de style pour la page filtre menu pays*/
+
+/* gestion de l'arrière plan*/
+html{
+    background-image: url("./imageFondFiltrePays.jpg");
+    background-size: auto;
+    background-position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+/*taille du logo*/
+.logo{
+    width:120px;
+}
+
+/*mis en forme de la barre de navigation*/
+#indexNav{
+    padding:20px 8%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;  
+}
+
+/*mis en forme de la liste de la barre de navigation*/
+#indexNav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+    border:rgb(5, 48, 5) 2px solid;
+    background-color:rgba(5, 79, 5, 0.612);
+    border-radius:30px;
+    padding:5px 10px
+}
+
+/*idem que précédemment mais lors du survol*/
+#indexNav ul li:hover{
+    background-color: rgb(2, 76, 2);
+    border:rgb(1, 35, 1) solid 2px;
+    border-radius:30px;
+    cursor:pointer;
+    transform: translateY(-2px);
+}
+
+/*idem que précédemment mais lorsque l'on clique dessus*/
+#indexNav ul li:active{
+    background-color: rgb(2, 76, 2);
+    border: black solid 2px;
+    border-radius:30px;
+    cursor:pointer;
+    transform: translateY(2px);
+}
+
+/*mis en forme du texte des liens de la barre de navigation*/
+#indexNav ul li a{
+    text-decoration: none;
+    color:snow;
+    font-size: 16px ;
+    font-family: "Finger Paint", sans-serif;
+    font-weight: 400;
+}
+
+/*mis en forme du texte Click on a country to see its recipes :*/
+h1{
+    color:rgb(4, 59, 4);
+    text-align: center;
+    text-shadow: 2px 2px 2px rgba(182, 225, 183, 0.855);
+    margin-top:-30px;
+    background-color: rgba(255, 250, 250, 0.766);
+    display:inline;
+    margin-left: 550px;
+}
+
+/*mise en forme des drapeaux individuels*/
+#button-american,#button-british,#button-canadian,#button-chinese,#button-croatian,#button-dutch,#button-egyptian,
+#button-filipino,#button-french,#button-greek,#button-indian,#button-irish,#button-italian,#button-jamaican,
+#button-japanese,#button-kenyan,#button-malaysian,#button-mexican,#button-moroccan,#button-polish,#button-portuguese,
+#button-russian,#button-spanish,#button-thai,#button-tunisian,#button-turkish,#button-vietnamese{
+    transition: all 0.2s ease;
+    margin-top: 20px;
+}
+
+/*mis en forme des drapeaux individuels lors du survol*/
+#button-american:hover,#button-british:hover,#button-canadian:hover,#button-chinese:hover,#button-croatian:hover,#button-dutch:hover,
+#button-egyptian:hover,#button-filipino:hover,#button-french:hover,#button-greek:hover,#button-indian:hover,#button-irish:hover,
+#button-italian:hover,#button-jamaican:hover,#button-japanese:hover,#button-kenyan:hover,#button-malaysian:hover,#button-mexican:hover,
+#button-moroccan:hover,#button-polish:hover,#button-portuguese:hover,#button-russian:hover,#button-spanish:hover,#button-thai:hover,
+#button-tunisian:hover,#button-turkish:hover,#button-vietnamese:hover{
+    cursor:pointer;
+    transform: translateY(-2px);
+    width:80px
+}
+
+/*mis en forme du bloc des drapeaux*/
+#area{
+    margin-bottom: 40px;
+}
+
+#menuTotalAffichage{
+    display:inline-block;
+    width: 20%; text-align: center;
+}
+ #texteH3PaysMenu{
+    color:white;
+    text-shadow: 2px 2px 2px rgb(2, 37, 2);
+    font-size: 20px;
+    font-family:'Courier New', Courier, monospace
+ }
+
+ #imagePaysMenu{
+    border-radius: 30px;
+    border:rgb(4, 59, 4) 2px solid;
+ }

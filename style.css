@@ -72,6 +72,7 @@ html{
     justify-content: flex-start;
     width:450px;
     height:60px;
+    margin-top:40px;
  }
 
  /*mis en forme du texte origin*/
@@ -111,7 +112,7 @@ html{
     width: 350px;
     padding:10px;
     margin-left: 750px;
-    margin-top: -280px;
+    margin-top: -260px;
 }
 
 /*mis en forme du titre Ingrédients*/
