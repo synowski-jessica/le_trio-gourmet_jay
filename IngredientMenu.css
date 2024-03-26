@@ -1,0 +1,36 @@
+.logo{
+    width:120px;
+    
+}
+
+/*mis en forme de la barre de navigation*/
+nav{
+    width: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    padding:20px 8%;
+    display: flex;
+    justify-content: space-between;
+    background-color: aqua;
+}
+
+/*mis en forme de la liste de la barre de navigation*/
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+    border:snow 2px solid;
+    border-radius:30px;
+    padding:5px 10px
+    
+}
+
+/*mis en forme des liens html interne de la barre de navigation*/
+nav ul li a{
+    text-decoration: none;
+    color:snow;
+    font-size: 16px ;
+    font-family: "Finger Paint", sans-serif;
+    font-weight: 400;
+}
