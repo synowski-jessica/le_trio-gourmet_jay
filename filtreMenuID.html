@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter menu by ID</title>
+    <script defer src="scriptFiltreMenuID.js"></script>
+    <link href="styleMenuID.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">    
+</head>
+<body>
+    <header>
+        <!--logo en haut à gauche + barre de navigation de la page en haut à droite-->
+            <nav id="indexNav">
+                <img src="logo_site_15.png" class="logo">
+                <ul>
+                    <li><a href="homePage.html">Homepage</a></li>
+                    <li><a href="randomMeal.html"> Get a Random Meal</a></li>
+                    <li><a href="filtreNomMenu.html">Filter by Name</a></li>
+                    <li><a href="filtrePaysMenu.html">Filter by Area</a></li>
+                    <li><a href="filtreIngredientMenu.html">Filter by Ingredient</a></li>
+                    <li><a><img id="imageRetour" src="retour.png" alt="retour"></a></li>
+                </ul>
+             </nav>  
+       </header>
+<main>
+    <div id="firstPart">
+        <div id="mpMenu">
+            <div id="menu">Menu : </div>
+            <div id="nameMeal"></div>  
+        </div>
+        <div id="mpOrigin">
+            <div id="origin">Origin :</div>
+            <div id="area"></div> 
+        </div>
+    </div>
+
+    <div id="secondPart">
+        <div>
+            <img id="imageMeal" src="" alt="" width="420" height="315"/>
+            <iframe id="videoSource" width="420" height="315"
+            src="" ></iframe> 
+        </div>
+        <div id="secondPart2">
+            <div id="ingredients"> Ingredients : </div>
+            <div id="ingredientMeal"></div>
+        </div>
+    </div>
+
+    <div id="lastPart">
+        <div id="instruction"> Instructions : </div>
+        <div id="instructionMeal"></div>
+    </div>
+</main>
+</body>
+</html>

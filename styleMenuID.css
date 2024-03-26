@@ -1,0 +1,163 @@
+/*feuille de style pour la page filtre menu pays*/
+
+/* gestion de l'arrière plan*/
+html{
+    background-image: url("./imageFondFiltrePays.jpg");
+    background-size: auto;
+    background-position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+/*taille du logo*/
+.logo{
+    width:120px;
+}
+
+/*mis en forme de la barre de navigation*/
+#indexNav{
+    padding:20px 8%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;  
+}
+
+/*mis en forme de la liste de la barre de navigation*/
+#indexNav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+    border:rgb(5, 48, 5) 2px solid;
+    background-color:rgba(5, 79, 5, 0.612);
+    border-radius:30px;
+    padding:5px 10px;
+}
+
+/*idem que précédemment mais lors du survol*/
+#indexNav ul li:hover{
+    background-color: rgb(2, 76, 2);
+    border:rgb(1, 35, 1) solid 2px;
+    border-radius:30px;
+    cursor:pointer;
+    transform: translateY(-2px);
+}
+
+/*idem que précédemment mais lorsque l'on clique dessus*/
+#indexNav ul li:active{
+    background-color: rgb(2, 76, 2);
+    border: black solid 2px;
+    border-radius:30px;
+    cursor:pointer;
+    transform: translateY(2px);
+}
+
+/*mis en forme du texte des liens de la barre de navigation*/
+#indexNav ul li a{
+    text-decoration: none;
+    color:snow;
+    font-size: 16px ;
+    font-family: "Finger Paint", sans-serif;
+    font-weight: 400;
+}
+
+#imageRetour{
+    width:40px;
+    height:40px;
+    padding: 0px;
+    margin:0px    
+}
+
+   
+/*mise en page de la 1ère partie correspondant au nom du menu+son image+le pays d'origine de la recette*/   
+#firstPart{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+/* met les titres + le détail sur 1 ligne et centrer*/
+#mpMenu,#mpOrigin{
+    display:flex;
+    align-items: center;
+}
+
+/* modification de la mise en page du titre Origin et menu*/
+#origin,#menu{
+    text-decoration: underline;
+    font-family: "Finger Paint", sans-serif;
+    font-size: 40px;
+    text-shadow: 4px 4px 4px rgb(1, 38, 6);
+    margin-right: 20px; 
+    color:white;
+}
+
+/*mis en forme du texte du nom de la recette +nom de l'origine*/
+#nameMeal,#area{
+    color:rgb(2, 54, 2);
+    font-family: "Finger Paint", sans-serif;
+    font-size: 40px;
+    background-color: rgba(255, 255, 255, 0.587);
+    border: dashed rgb(2, 54, 2);
+    padding:4px;
+}
+
+#secondPart{
+    display:flex;
+    margin-top: 30px;;
+}
+
+/*mis en forme de la vidéo et de l'image*/
+#videoSource,#imageMeal{
+    border-radius: 30px;
+    border:rgb(4, 59, 4) 2px solid;
+}
+
+#imageMeal{
+    margin-left: 90px;
+}
+
+#videoSource{
+    margin-left: 90px;
+}
+
+#secondPart2{
+    background-color:rgba(255, 255, 255, 0.874);
+    border:   rgb(2, 54, 2) thick double; 
+    border-radius: 30px;
+    padding:10px;
+    width: 350px;
+    margin-left: 90px;
+}
+
+/*mis en forme du titre Ingrédients*/
+#ingredients{
+    text-decoration: underline;
+    font-family: "Finger Paint", sans-serif;
+    font-size: 40px;
+    
+}
+
+/*mis en forme multiple du titre menu + titre instruction*/
+#instruction{
+    text-decoration: underline;
+    font-family: "Finger Paint", sans-serif;
+    font-size: 40px;
+}
+
+/*mis en forme du détail des ingrédients+des instructions de la recette*/
+#ingredientMeal,#instructionMeal{
+    font-size:25px;
+    font-weight: lighter;
+    text-align: justify;
+}
+
+/*mis en forme du bloc "texte instructions"+"le détail des instructions"*/
+#lastPart{
+    border:  rgb(14, 49, 3) thick double;
+    background-color:white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+
+
+
