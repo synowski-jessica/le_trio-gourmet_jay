@@ -30,7 +30,6 @@ let buttonVietnamese = document.getElementById("button-vietnamese");
 
 //fonction qui renvoie une recette aléatoire via l'API
 const recettePays = async (pays) => {
-  //window.location.replace(`filtrePaysMenu.html?country=${pays}`);
   window.history.pushState("", "", `filtrePaysMenu.html?country=${pays}`);
   let namePays = pays;
   const apiKey = "1";

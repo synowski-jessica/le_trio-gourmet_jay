@@ -6,14 +6,34 @@
     <title>Document</title>
     <script defer src="IngredientMenu.js"></script>
     <link href="IngredientMenu.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
 <body> 
-   
-    <h1> filtrer les recettes par nom d'ingrédient</h1>
-    <div>
-        <input id="recherche" type="text" placeholder="Rechercher Ingredient">
-        <button id="valeur" > RECHERCHER</button>
-    </div>
-    <div id="mpMenu"></div>
+    <header>
+        <!--logo en haut à gauche + barre de navigation de la page en haut à droite-->
+            <nav id="indexNav">
+                <img src="logo_site_16.png" class="logo">
+                <ul>
+                    <li><a href="homePage.html">Homepage</a></li>
+                    <li><a href="randomMeal.html"> Get a Random Meal</a></li>
+                    <li><a href="filtreNomMenu.html">Filter by Name</a></li>
+                    <li><a href="filtrePaysMenu.html">Filter by Area</a></li>
+                    <li><a href="filtreIngredientMenu.html">Filter by Ingredient</a></li>
+                </ul>
+             </nav>  
+    </header>
+    <main>
+        
+        <div id="firstPart">
+            <div>
+                <h1> Filter menu by Ingredient :</h1>
+            </div>
+            <input id="recherche" type="text" placeholder="Rechercher Ingredient">
+            <button id="valeur" > SEARCH</button>
+        </div>
+        <div id="mpMenu"></div>
+    </main>
 </body>
 </html>
 

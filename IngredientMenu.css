@@ -1,36 +1,111 @@
+/*feuille de style pour la page filtre menu pays*/
+
+/* gestion de l'arrière plan*/
+html{
+    background-image: url("./arrierePlanRechercheByIngredient.jpg");
+    background-size: auto;
+    background-position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/*taille du logo*/
 .logo{
     width:120px;
-    
 }
 
 /*mis en forme de la barre de navigation*/
-nav{
-    width: 100%;
-    position:absolute;
-    top:0;
-    left:0;
+#indexNav{
     padding:20px 8%;
     display: flex;
-    justify-content: space-between;
-    background-color: aqua;
+    align-items: flex-start;
+    justify-content: space-between;  
 }
 
 /*mis en forme de la liste de la barre de navigation*/
-nav ul li {
+#indexNav ul li {
     list-style: none;
     display: inline-block;
-    margin-left: 40px;
-    border:snow 2px solid;
+    margin-left: 20px;
+    border:rgb(48, 22, 5) 2px solid;
+    background-color:rgba(48, 22, 5, 0.669);
     border-radius:30px;
-    padding:5px 10px
-    
+    padding:5px 10px;
 }
 
-/*mis en forme des liens html interne de la barre de navigation*/
-nav ul li a{
+/*idem que précédemment mais lors du survol*/
+#indexNav ul li:hover{
+    background-color: rgb(64, 29, 6);
+    border:rgb(34, 16, 4) 2px solid;
+    border-radius:30px;
+    cursor:pointer;
+    transform: translateY(-2px);
+}
+
+/*idem que précédemment mais lorsque l'on clique dessus*/
+#indexNav ul li:active{
+    background-color: rgb(2, 76, 2);
+    border: black solid 2px;
+    border-radius:30px;
+    cursor:pointer;
+    transform: translateY(2px);
+}
+
+/*mis en forme du texte des liens de la barre de navigation*/
+#indexNav ul li a{
     text-decoration: none;
     color:snow;
     font-size: 16px ;
     font-family: "Finger Paint", sans-serif;
     font-weight: 400;
 }
+
+
+/* contient le titre +barre de recherche du mot utilisateur+bouton search*/
+
+#firstPart{
+    display:flex;
+    margin-bottom: 50px;
+}
+
+/*titre de la page*/
+h1{
+    color:rgb(59, 32, 4);
+    text-align: center;
+    text-shadow: 2px 2px 2px rgba(74, 47, 4, 0.69);
+    margin-top:-30px;
+    background-color: rgba(255, 250, 250, 0.766);
+    display:inline;
+    margin-left: 400px
+}
+
+/*la où l'utilisateur rentre un ingrédient*/
+#recherche{
+    height:30px;
+    width:250px;
+    margin-left: 25px;
+}
+
+/*bouton rechercher qui permet de voir les recettes de la donnée entrée par l'utilisateur*/
+#valeur{
+    height:35px;
+    width:100px;
+    margin-left: 10px;
+}
+
+#menuTotalAffichage{
+    display:inline-block;
+    width: 20%; text-align: center;
+}
+ #texteH3IngredientMenu{
+    color:white;
+    text-shadow: 2px 2px 2px rgb(2, 37, 2);
+    font-size: 20px;
+    font-family:'Courier New', Courier, monospace
+ }
+
+ #imageIngredientMenu{
+    border-radius: 30px;
+    border:rgb(4, 59, 4) 2px solid;
+ }
