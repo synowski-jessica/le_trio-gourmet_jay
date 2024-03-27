@@ -2,7 +2,7 @@
 
 /* gestion de l'arrière plan*/
 html{
-    background-image: url("./logo_site_12.jpg");
+    background-image: url("./images/logo/logo_site_12.jpg");
     background-size: contain;
     background-position: absolute;
     right: 0;

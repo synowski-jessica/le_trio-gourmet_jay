@@ -2,7 +2,7 @@
 
 /* gestion de l'arrière plan*/
 html{
-    background-image: url("./imageFondFiltrePays.jpg");
+    background-image: url("./images/imageFondFiltrePays.jpg");
     background-size: auto;
     background-position: absolute;
     right: 0;

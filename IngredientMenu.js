@@ -2,23 +2,26 @@ let valeur = document.getElementById("valeur")
 let mpMenu= document.getElementById("mpMenu")
 
 function gestionDesErreurs(x){
-    if (x ===""){
+    if (x.trim() ===""){
+        alert("Veuillez saisir quelque chose dans la barre de recherche")
         return
     }
-    if(x === null){
+    if(x === null || x=== undefined){
+        alert("La valeur saisie est invalide!")
         return
     }
     if(typeof(x)!== "string"){
-        return 
-    }
-    if(x === undefined){
+        alert("La valeur saisie doit etre une chaine de caracteres")
         return
     }
+    return true
 }
 
 const MainIngredient = async () => {
     let recherche = document.getElementById("recherche").value;
-    gestionDesErreurs(recherche);
+    if(!gestionDesErreurs(recherche)){
+        return;
+    };
     const apiKey = "1";
     let requestString = `https://www.themealdb.com/api/json/v1/${apiKey}/filter.php?i=${recherche}`;
     let data = await fetch(requestString);
