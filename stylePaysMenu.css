@@ -118,3 +118,23 @@ h1{
     border-radius: 30px;
     border:rgb(4, 59, 4) 2px solid;
  }
+/* CSS pour les étiquettes de drapeaux */
+.flag-label {
+    display: none;
+    position: relative;
+    /*bottom: -30px;*/
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    pointer-events: none; /* pour que l'étiquette n'interfère pas avec le survol */;
+    text-align: center;
+}
+
+.flag-container {
+    position: relative;
+    display: inline-block;
+   margin: 0 10px; /* ajustez selon vos besoins */
+}

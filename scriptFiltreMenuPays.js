@@ -28,6 +28,18 @@ let buttonTunisian = document.getElementById("button-tunisian");
 let buttonTurkish = document.getElementById("button-turkish");
 let buttonVietnamese = document.getElementById("button-vietnamese");
 
+// JavaScript pour afficher les étiquettes de drapeaux lors du survol
+const flags = document.querySelectorAll(".flag-container");
+flags.forEach((flag) => {
+  const label = flag.querySelector(".flag-label");
+  flag.addEventListener("mouseover", () => {
+    label.style.display = "block";
+  });
+  flag.addEventListener("mouseout", () => {
+    label.style.display = "none";
+  });
+});
+
 //fonction qui renvoie une recette aléatoire via l'API
 const recettePays = async (pays) => {
   window.history.pushState("", "", `filtrePaysMenu.html?country=${pays}`);
