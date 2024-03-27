@@ -5,11 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script defer src="scriptFiltreMenuNom.js"></script>
+    <link href="styleFiltreNom.css" rel="stylesheet">
 </head>
 <body>
     <h1> filtrer les recettes par nom de menu</h1>
-    
-    <button id="button-home">Home</button>
+    <form id="auto-suggest" action="#" method="post">
+        <input type="text" class="search" id="search" value="Rechercher..." onfocus="if(this.value=='Rechercher...')this.value=''" onblur="if(this.value=='')this.value='Rechercher...'" autocomplete="off"/>
+        <ul class="suggestions">
+        </ul>
+    </form>
+    <button type="submit" id="validateNom">SEARCH</button>
+    <div id="firstPart">
+        <div >
+            <div id="mpMenu">
+                <div id="menu">Menu : </div>
+                <img id="imageMeal" src="" alt="" width="220" height="140"/>
+            </div>
+            <div >
+                <div id="nameMeal"></div>  
+            </div>
+        </div>
+        <div id="mpOrigin">
+            <div id="origin">Origin :</div>
+            <div id="area"></div>
+        </div>     
+    </div>
+
+    <div id="secondPart">
+        <div>
+            <iframe id="videoSource" width="420" height="315"
+            src="" ></iframe> 
+        </div>
+        <div id="secondPart2">
+            <div id="ingredients"> Ingredients : </div>
+            <div id="ingredientMeal"></div>
+        </div>
+    </div>
+
+    <div id="lastPart">
+        <div id="instruction"> Instructions : </div>
+        <div id="instructionMeal"></div>
+    </div>
 </body>
 </html>
 
