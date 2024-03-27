@@ -91,10 +91,17 @@ h1{
     width:80px
 }
 
+#button-french:active{
+    transform: translateY(-2px);
+    width:80px
+}
+
+
 /*mis en forme du bloc des drapeaux*/
 #area{
     margin-bottom: 40px;
 }
+
 
 #menuTotalAffichage{
     display:inline-block;
