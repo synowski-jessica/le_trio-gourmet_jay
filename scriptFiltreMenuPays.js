@@ -79,32 +79,54 @@ if (nameCountry != null) {
   recettePays(nameCountry);
 }
 
-/*`<div style="display:inline-block;width: 20%; text-align: center;">`*/
 //lier le bouton qui permet d'obtenir la recette aléatoire via un click
-buttonAmerican.addEventListener("click", () => recettePays("American"));
-buttonBritish.addEventListener("click", () => recettePays("British"));
-buttonCanadian.addEventListener("click", () => recettePays("Canadian"));
-buttonChinese.addEventListener("click", () => recettePays("Chinese"));
-buttonCroatian.addEventListener("click", () => recettePays("Croatian"));
-buttonDutch.addEventListener("click", () => recettePays("Dutch"));
-buttonEgyptian.addEventListener("click", () => recettePays("Egyptian"));
-buttonFilipino.addEventListener("click", () => recettePays("Filipino"));
-buttonFrench.addEventListener("click", () => recettePays("French"));
-buttonGreek.addEventListener("click", () => recettePays("Greek"));
-buttonIndian.addEventListener("click", () => recettePays("Indian"));
-buttonIrish.addEventListener("click", () => recettePays("Irish"));
-buttonItalian.addEventListener("click", () => recettePays("Italian"));
-buttonJamaican.addEventListener("click", () => recettePays("Jamaican"));
-buttonJapanese.addEventListener("click", () => recettePays("Japanese"));
-buttonKenyan.addEventListener("click", () => recettePays("Kenyan"));
-buttonMalaysian.addEventListener("click", () => recettePays("Malaysian"));
-buttonMexican.addEventListener("click", () => recettePays("Mexican"));
-buttonMoroccan.addEventListener("click", () => recettePays("Moroccan"));
-buttonPolish.addEventListener("click", () => recettePays("Polish"));
-buttonPortuguese.addEventListener("click", () => recettePays("Portuguese"));
-buttonRussian.addEventListener("click", () => recettePays("Russian"));
-buttonSpanish.addEventListener("click", () => recettePays("Spanish"));
-buttonThai.addEventListener("click", () => recettePays("Thai"));
-buttonTunisian.addEventListener("click", () => recettePays("Tunisian"));
-buttonTurkish.addEventListener("click", () => recettePays("Turkish"));
-buttonVietnamese.addEventListener("click", () => recettePays("Vietnamese"));
+buttonAmerican.addEventListener("click", () => gestionClicPays("American"));
+buttonBritish.addEventListener("click", () => gestionClicPays("British"));
+buttonCanadian.addEventListener("click", () => gestionClicPays("Canadian"));
+buttonChinese.addEventListener("click", () => gestionClicPays("Chinese"));
+buttonCroatian.addEventListener("click", () => gestionClicPays("Croatian"));
+buttonDutch.addEventListener("click", () => gestionClicPays("Dutch"));
+buttonEgyptian.addEventListener("click", () => gestionClicPays("Egyptian"));
+buttonFilipino.addEventListener("click", () => gestionClicPays("Filipino"));
+buttonFrench.addEventListener("click", () => gestionClicPays("French"));
+buttonGreek.addEventListener("click", () => gestionClicPays("Greek"));
+buttonIndian.addEventListener("click", () => gestionClicPays("Indian"));
+buttonIrish.addEventListener("click", () => gestionClicPays("Irish"));
+buttonItalian.addEventListener("click", () => gestionClicPays("Italian"));
+buttonJamaican.addEventListener("click", () => gestionClicPays("Jamaican"));
+buttonJapanese.addEventListener("click", () => gestionClicPays("Japanese"));
+buttonKenyan.addEventListener("click", () => gestionClicPays("Kenyan"));
+buttonMalaysian.addEventListener("click", () => gestionClicPays("Malaysian"));
+buttonMexican.addEventListener("click", () => gestionClicPays("Mexican"));
+buttonMoroccan.addEventListener("click", () => gestionClicPays("Moroccan"));
+buttonPolish.addEventListener("click", () => gestionClicPays("Polish"));
+buttonPortuguese.addEventListener("click", () => gestionClicPays("Portuguese"));
+buttonRussian.addEventListener("click", () => gestionClicPays("Russian"));
+buttonSpanish.addEventListener("click", () => gestionClicPays("Spanish"));
+buttonThai.addEventListener("click", () => gestionClicPays("Thai"));
+buttonTunisian.addEventListener("click", () => gestionClicPays("Tunisian"));
+buttonTurkish.addEventListener("click", () => gestionClicPays("Turkish"));
+buttonVietnamese.addEventListener("click", () => gestionClicPays("Vietnamese"));
+
+// Fonction pour afficher le pays sélectionné
+function afficherPaysSelectionne(pays) {
+  // Sélectionner l'élément HTML où afficher le pays sélectionné
+  let affichageRecettePaysSelectionne = document.getElementById(
+    "affichagePaysSelectionne"
+  );
+  // Mettre à jour le contenu de l'élément avec le pays sélectionné
+  affichageRecettePaysSelectionne.textContent = "Selected country : " + pays;
+}
+
+// Fonction pour gérer le clic sur les boutons de pays
+function gestionClicPays(pays) {
+  recettePays(pays); // Appeler la fonction pour récupérer et afficher les recettes du pays sélectionné
+  afficherPaysSelectionne(pays); // Appeler la fonction pour afficher le pays sélectionné
+}
+
+// Vérifier s'il y a un pays dans l'URL et l'afficher
+const params2 = new URLSearchParams(window.location.search);
+const nameCountry2 = params2.get("country");
+if (nameCountry2 != null) {
+  afficherPaysSelectionne(nameCountry2);
+}

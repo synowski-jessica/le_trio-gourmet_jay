@@ -91,15 +91,27 @@ h1{
     width:80px
 }
 
-#button-french:active{
-    transform: translateY(-2px);
-    width:80px
-}
+
 
 
 /*mis en forme du bloc des drapeaux*/
 #area{
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    color:rgb(4, 59, 4);
+    text-align: center;
+    text-shadow: 2px 2px 2px rgba(182, 225, 183, 0.855);
+    font-size: 30px;
+    font-weight: bold;
+ 
+   
+}
+
+#affichagePaysSelectionne{
+    margin-left: 300px;
+    margin-top: 15px;
+
 }
 
 
